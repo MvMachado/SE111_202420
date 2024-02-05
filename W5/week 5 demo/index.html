@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name = "author" content = "M Machado">
+    <meta name = "descriptions" content = "Table and demo">
+    <title>W5 demo</title>
+    
+    <style>
+
+
+    </style>
+
+
+</head>
+<body>
+    <h5><i>W5 assignment solutions for all SE111 sections</i><a href=""> back to michelles repo index</a></h5>
+
+    <h1> </h1>
+    <form method="GET" action=""> 
+
+        <table>
+
+            <!---->
+            <thead>
+                <!-- COLUMN HEADERS- must use <b/h# if you want them to bold-->
+                
+                <!--Table row: one row of data populated with <td>-->
+                
+                <!--MAKE SURE EVERY ROW HAS THE SAME NUMBER OF <td>!!!-->
+
+                <!--New row-->
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        <h2> Label</h2>
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        <h2> Input</h2>
+
+                    </td>
+
+                </tr>
+
+
+            </thead>
+            
+            <!--TABLE BODY-->
+
+            <tbody>
+                <!--New row-->
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="fName"> First Name</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input types="text" name="fName" id="fName"
+                        placeholder="Angel" maxlength="10">
+                    </td>
+
+                </tr>
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="lName"> Last Name</label>
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input types="text" name="lName" id="lName"
+                        placeholder="dust" maxlength="10" required>
+
+
+                    </td>
+
+                </tr>
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="age"> Age:</label>
+
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="number" name="age" id="age">
+
+                    </td>
+
+                </tr>
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="comments"> Comments:</label>
+
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <textarea id="comments" name="comments" rows="10" cols="20" placeholder="leave your comment here. . ." 
+                        style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"></textarea>
+
+                    </td>
+
+                </tr>
+                
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    <!--DROP DOWN SELECTION ELEMENT-->
+                    <td> 
+                        
+                        <label for="Favecolor"> Pick your <br> Favorite color:</label>
+
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <select name="favecolor" id="faveColor">
+                            <!--user is restricted to only secelected options-->
+                            
+                            <option value="r" style="color:red;">Red</option>
+                            <option value="o">Orange</option>
+                            <option value="y">Yellow</option>
+                            <option value="g">Green</option>
+                            <option value="b">blue</option>
+                            <option value="i">Indigo</option>
+                            <option value="p">Purple</option>
+
+
+                        </select>
+                    
+                    </td>
+
+                </tr>
+                
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--RADIO BUTTONS: MULTIPLE CHOICE-->
+                    
+                    <td> 
+                        
+                        <label for="study"> Program of Study:</label>
+
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="radio" name="study" value="SE">
+                        Software Engineering <br>
+                        <input type="radio" name="study" value="CYB">
+                        Cyber Security <br>
+                        <input type="radio" name="study" value="WD">
+                        Web Development <br> 
+
+                    </td>
+
+                </tr>
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--checkboxes elements- user can select as many as they like!-->
+                    
+                    <td> 
+                        
+                        <label for="vehicle"> Select your Vehicle:</label>
+
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="checkbox" name="vehicle" value="car">Car <br>
+                        <input type="checkbox" name="vehicle" value="bike">Bike <br>
+                        <input type="checkbox" name="vehicle" value="motocyce">Motorcycle <br>
+                        <input type="checkbox" name="vehicle" value="Ecar">Electric car <br>
+
+                    </td>
+
+                </tr>
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="date"> Date:</label>
+
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="date" name="date" id="date">
+
+                    </td>
+
+                </tr>
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                       
+
+                    </td>
+
+                    <!--Button-->
+
+                    <td>
+                        
+                        <br>
+                        <input type="submit" value="SUBMIT :D">
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+            <!--TABLE FOOT-->
+                
+            <tfoot> </tfoot>
+
+        </table>
+    
+    </form>
+
+
+
+</body>
+</html>
