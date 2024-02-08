@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="M Machado">
+    <meta name="description" content="Default HTML Page for SE 111">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Week 5 | Tables and Forms</title>
+
+    <style>
+        
+        table, tr, td{border:1px solid black;}
+
+    </style>
+</head>
+<body>
+    <h1><b> Birthday Party Registration Form </b></h1>
+    <h2> </h2>
+    <form method="GET" action="confirm.html">
+        <table>
+
+            <!---->
+            <thead>
+                <!-- COLUMN HEADERS- must use <b/h# if you want them to bold-->
+                
+                <!--Table row: one row of data populated with <td>-->
+                
+                <!--MAKE SURE EVERY ROW HAS THE SAME NUMBER OF <td>!!!-->
+
+                <!--New row-->
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        <h2> Labels</h2>
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        <h2> Forms Fields</h2>
+
+                    </td>
+
+                </tr>
+
+
+            </thead>
+            
+            <!--TABLE BODY-->
+
+            <tbody>
+                <!--New row-->
+
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="gfirst"> Parent/Guardian Name</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="text" name="gfirst" id="g-first"
+                        placeholder="First Name" maxlength="20" required >
+
+                        <br>
+
+                        <input type="text" name="gfirst" id="g-first"
+                        placeholder="Last Name" maxlength="20" required>
+
+                    </td>
+
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="cfirst"> Child's First Name</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="text" name="cfirst" id="c-first"
+                        placeholder="Child's FirstName" required>
+
+                    </td>
+
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="age"> Childs Age</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="number" name="age" value="3" required >
+
+                    </td>
+
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        <h3>Date and Times</h3>
+                    </td>
+                    <td>
+                        
+                        <h3></h3>
+
+                    </td>
+                </tr>
+                
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="date"> Date</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="date" name="date" required>
+
+                    </td>
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="time"> Start Time</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="time" name="time" required>
+
+                    </td>
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="guests"> Number of Guests</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="number" name="guests" value="5">
+
+                    </td>
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        <h4>Food</h4>
+                    </td>
+                    <td>
+                        
+                        <h4></h4>
+
+                    </td>
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="size"> Size</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="radio" name="study" value="sm">
+                        Small <br>
+                        <input type="radio" name="study" value="md">
+                        Medium <br>
+                        <input type="radio" name="study" value="lg">
+                        Large <br> 
+
+                    </td>
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--checkboxes elements- user can select as many as they like!-->
+                    
+                    <td> 
+                        
+                        <label for="drinks"> Drinks</label>
+
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        
+                        <input type="checkbox" required value="coke" checked="true"> <label for="drink1">Coke</label><br>
+                        <input type="checkbox" required value="sprite"> <label for="drink2">Sprite</label><br>
+                        <input type="checkbox" required value="fruit punch"> <label for="drink3">fruit punch</label><br>
+                        <input type="checkbox" required value="lemonade"> <label for="drink4">lemonade</label><br>
+                        <input type="checkbox" required value="iced tea"> <label for="drink5">Iced Tea</label><br>
+                    </td>
+
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        
+                        <label for="cake"> Cake</label>
+                        
+                    </td>
+
+                    <!--input-->
+
+                    <td>
+                        <select name="cake" >
+
+                            <option>Chocolate</option>
+                            <option>Vanilla</option>
+                            <option>I'll bring my own</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr> 
+                    
+                    <!--Label-->
+                    
+                    <!--Make sure it matches inpurt's id & name (almost always)-->
+                    
+                    <td> 
+                        <h5><b>Decorations</b></h5>
+                    </td>
+                    <td>
+                        
+                        <h5></h5>
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+        
+    
+</body>
+</html>
