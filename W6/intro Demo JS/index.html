@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6| JS intro demo</title>
+    <style>
+
+        body {
+
+        background-color:gray;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>W6 | intro to javascript demo</h1>
+
+    <!--In document javascript-->
+    <script>
+        //writing JS in here
+        //this is a COMMENT in JS
+
+        //all variables must be declared before they can be defines and used
+        //we declare a variable with the keyword: var
+        
+        var name = 'MM' //declaration & assignment 
+
+        var num1 = 10
+        var num2 = 7
+
+        var sum = num1 + num2
+
+        //output------------------
+        //cannot use num1 and num2 in a process until they are both: declared & defined
+        console.log(`Num1: ${num1} | Num2: ${num2} | Sum: ${sum}`) //` != ''
+        //consol.log() only used for development/debugging
+
+        //alert() can be seen/viewed by a user visiting the page
+        //create a pop-up window in the broswer page; user miust interact with the alert ()before any further lines are read
+
+        alert(` hi there,${name}!`)
+
+        console.log(`passed the alert()`)
+
+        //input-------------------
+
+        //promp() prompting user with a message; a pop-up with text field input
+        //element is displayed - user entents data into fields, presses ok to continue
+        var lname = prompt(`Hi again ${name}, Please enter your LAST name: `)
+
+        console.log(`passed the prompt()`)
+        
+        console.log(`Last:${lname}`) //for developer/debugging
+        alert(`Last: ${lname}`) //for users
+
+        //CAST PROMPT RETURNS TO ENSURE THEY ARE NUMBERS
+        var userNum = Number(prompt(`Enter a number:`))
+        //userNum = Number(userNum)
+        //console.log(userNum *10) example
+        console.log(userNum.toFixed(2)) //display a numb to a rounded decimal
+
+        var tax = userNum * 0.20 
+
+        alert(`Your Taxes are due: $${tax.toFixed(2)}`) //you can use \n for break
+        console.log(`Your Taxes are due: $${tax.toFixed(2)}`)
+        
+        //alert(`GROSS PAY:${} \nTAX AMOUNT: $${} \n NET PAY: $${}`)//for w6 assignment
+
+
+    </script>    
+    
+</body>
+</html>
