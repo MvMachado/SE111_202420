@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6| JS intro demo</title>
+    <style>
+
+        body {
+
+        background-color:rgb(134, 64, 129);
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>W6 | Calculator :3 enjoy </h1>
+
+    <!--In document javascript-->
+    <script>
+
+        alert(`hello there!`)
+
+        console.log(`passed the alert()`)
+
+        var tax = 0.20 
+
+        //input-------------------
+
+        //promp() prompting user with a message; a pop-up with text field input
+        
+        var lname = prompt(`Please enter your LAST name: `)
+        
+        var hourRate = (prompt(`Enter in your hourly rates:`))
+
+        var hourWorked = (prompt(`Enter in your hourly worked:`))
+
+        var grossPay = hourRate * hourWorked
+        var tax = grossPay * .20 
+        var netPay = grossPay - tax
+        
+        alert(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's share: $${tax.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
+
+        console.log(`Your Gross Pay are: $${grossPay.toFixed(2)}`)
+
+        console.log(`Uncle Sam's share:  $${tax.toFixed(2)}`)
+
+        console.log(`Your Net Pay are:   $${netPay.toFixed(2)}`)
+
+    </script>    
+    
+</body>
+</html>
