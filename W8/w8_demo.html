@@ -381,15 +381,20 @@
             for (key in pets[i])
             {
                 content += `<p><b>${key.toUpperCase()}:</b> ${pet[i][key]}</p>`
-        
+                
             }
             //add horizontal rule after each pet object
+            
             content += `<hr>`
-        }
+
+
+        }//end of loop groing through people array to edit 'output'
 
         footinfo.innerHTML += content //adds new giant string in content to the footinfo (#obj-info div in the footer)
 
-        //--rock paper scissors script--
+        //log the output string
+        //replace the outputdiv's inner html with the output string
+        document.querySelector(`#output`).innterHTML = output
 
 
 	</script>

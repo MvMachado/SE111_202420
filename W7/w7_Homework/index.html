@@ -106,11 +106,8 @@
         //PART1-----selecting and storing HTML elements------------
         /*
             declare names for each of the following elements in the document: body, h1, input, div, input buttons
-
             use EITHER .querySelector() OR .getElementById
-
             console.log() all of these elements once complete
-            
         */
         var body = document.querySelector(`body`)
 
@@ -120,17 +117,34 @@
 
         console.log(h1) 
 
-        var input = document.querySelector(`input`)
+        var fname = document.getElementById(`first`)
+        
+        console.log(first)
 
-        console.log(input)
+        var lname = document.getElementById(`last`)
+        
+        console.log(last)
 
-        var div = document.querySelector(`div`)
+        var Rate = document.getElementById(`rate`)
+        
+        console.log(Rate)
 
-        console.log(div)
+        var hours = document.getElementById(`hours`)
 
-       var inputButton = document.querySelector(`#enter-button`)
+        console.log(hours)
 
-        console.log(inputButton)
+        var enterButton = document.getElementById(`enter-button`)
+
+        console.log(enterButton)
+
+        var info = document.querySelector(`#info`)
+
+        console.log(`#info`)
+
+        var confirmButton = document.getElementById(`confirm-button`)
+
+        console.log(confirmButton)
+
 
         //PART2------adding event listeners------------------------
         /*
@@ -138,32 +152,38 @@
 
             add an event listener to the #confirm-button that runs a function called "confirmForm"
         */
-        document.querySelector(`#enter-button`).addEventListener(`click`, formData)
+        enterButton.addEventListener(`click`, formData)
 
-        document.querySelector(`#confirm-button`).addEventListener(`click`, confirmForm)
-
-        //document.querySelector(`#confirm-button`).addEventListener(`click`, confirmForm)
+        //document.getElementById(`confirm-button`).addEventListener(`click`, confirmForm )
 
         //PART3------building event functions----------------------
-        function formData()
+        function formData(event)
         {
-            var fname = document.getElementById(`first`).value
-
-            var lname = document.getElementById(`last`).value
-
-            var rate = document.getElementbyId(`rate`).value
             
-            var hours = document.getElementById(`hours`).value
+            var fullName = fname.value + ` ` + lname.value
 
-            var fullName = fname + ` ` + lname
+            var grossPay = Number(rate.value) * Number(hours.value)
 
-            var grossPay = rate * hours
+            var taxAmount = grossPay * .2
 
-            var netPay = grossPay 
+            var netPay = grossPay - taxAmount
+
+            console.log =(fullName, grossPay.toFixed(2), taxAmount.toFixed(2), netPay.toFixed(2))
 
             info.innerHTML += `<p><b>Full Name:</b> ${fullName}`
 
-            console.log =(fullName, grossPay, taxAmount, netPay)
+            info.innerHTML += `<p><b>gross pay:</b>${grossPay}</p>`
+            
+            info.innerHTML += `<p><b>gross pay:</b>${taxAmount}</p>`
+            
+            info.innerHTML += `<p><b>gross pay:</b>${netPay}</p>`
+        
+        }
+        
+            function confirmForm(event)
+        {
+
+
 
         }
         /*
@@ -178,7 +198,7 @@
 
                 REMEMBER: form text field data is treated as a STRING so you will most likely need the Number() 
 
-
+            
             confirmForm() instructions:
                 -store the input element values to descriptive names
                 -declare and create a "fullName" using the first and last values
@@ -188,7 +208,7 @@
                 
 
         */
-       function formData(event)
+       //function formData(event)
        {
             //EXTRA CREDIT---------+5pts-------------------------------
             /*
@@ -198,7 +218,7 @@
        }//formData()
 
 
-       function confirmData(event)
+       //function confirmData(event)
        {
 
        }//confirmData()
