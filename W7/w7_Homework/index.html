@@ -154,7 +154,7 @@
         */
         enterButton.addEventListener(`click`, formData)
 
-        //document.getElementById(`confirm-button`).addEventListener(`click`, confirmForm )
+        confirmButton.addEventListener(`click`, confirmForm )
 
         //PART3------building event functions----------------------
         function formData(event)
@@ -168,22 +168,36 @@
 
             var netPay = grossPay - taxAmount
 
-            console.log =(fullName, grossPay.toFixed(2), taxAmount.toFixed(2), netPay.toFixed(2))
+            console.log = (fullName, grossPay, taxAmount, netPay)
 
             info.innerHTML += `<p><b>Full Name:</b> ${fullName}`
 
-            info.innerHTML += `<p><b>gross pay:</b>${grossPay}</p>`
+            info.innerHTML += `<p><b>Gross pay:</b> ${grossPay.toFixed(2)}</p>`
             
-            info.innerHTML += `<p><b>gross pay:</b>${taxAmount}</p>`
+            info.innerHTML += `<p><b>Tax Amount:</b> ${taxAmount.toFixed(2)}</p>`
             
-            info.innerHTML += `<p><b>gross pay:</b>${netPay}</p>`
-        
+            info.innerHTML += `<p><b>Net pay:</b> ${netPay.toFixed(2)}</p>`
         }
         
             function confirmForm(event)
         {
+            var fullName = fname.value + ` ` + lname.value
 
+            var grossPay = Number(rate.value) * Number(hours.value)
 
+            var taxAmount = grossPay * .2
+
+            var netPay = grossPay - taxAmount
+
+            console.log = (fullName, grossPay, taxAmount, netPay)
+
+            info.innerHTML += `<p><b>Full Name:</b> ${fullName}`
+
+            info.innerHTML += `<p><b>Gross pay:</b> ${grossPay.toFixed(2)}</p>`
+
+            info.innerHTML += `<p><b>Tax Amount:</b> ${taxAmount.toFixed(2)}</p>`
+
+            info.innerHTML += `<p><b>Net pay:</b> ${netPay.toFixed(2)}</p>`
 
         }
         /*
