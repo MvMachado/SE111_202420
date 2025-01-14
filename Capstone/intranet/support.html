@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Service - Saru Inc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        form {
+            margin: 2rem auto;
+            max-width: 400px;
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .technicians {
+            margin: 2rem auto;
+            max-width: 600px;
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .technicians h3 {
+            margin-bottom: 1rem;
+        }
+        .technicians ul {
+            list-style: none;
+            padding: 0;
+        }
+        .technicians li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>Saru Inc - Support Service</h1>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="index.html">Main Page</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="calendar.html">Calendar</a>
+    </nav>
+
+    <main>
+        <h2>Contact Support</h2>
+        <form action="#" method="post">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="reason">Reason for Contacting:</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Describe your issue or question" required></textarea>
+
+            <label for="technician">Select Technician:</label>
+            <select id="technician" name="technician" required>
+                <option value="mr_shrimp">Mr. Shrimp (shrimp@example.com)</option>
+                <option value="mai_kawabanga">Mai Kawabanga (mai.k@example.com)</option>
+                <option value="acra_silky">Acra Silky (acra.s@example.com)</option>
+                <option value="reiko_kashima">Reiko Kashima (reiko.k@example.com)</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <section class="technicians">
+            <h3>Available Technicians</h3>
+            <ul>
+                <li><strong>Mr. Shrimp</strong> - shrimp@example.com</li>
+                <li><strong>Mai Kawabanga</strong> - mai.k@example.com</li>
+                <li><strong>Acra Silky</strong> - acra.s@example.com</li>
+                <li><strong>Reiko Kashima</strong> - reiko.k@example.com</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

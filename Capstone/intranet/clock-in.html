@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clocking In - Saru Inc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        form {
+            margin: 2rem auto;
+            max-width: 400px;
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        table {
+            width: 80%;
+            margin: 2rem auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: left;
+        }
+        th {
+            background-color: #444;
+            color: white;
+        }
+    </style>
+    <script>
+        const hourlyRates = {
+            general: 21,
+            technician: 21,
+            writer: 42,
+            sales: 23
+        };
+
+        function calculateWeeklyPay() {
+            const role = document.getElementById('role').value;
+            const days = document.querySelectorAll('.day');
+            let totalHours = 0;
+
+            days.forEach(day => {
+                const clockIn = parseFloat(day.querySelector('.clock-in').value) || 0;
+                const clockOut = parseFloat(day.querySelector('.clock-out').value) || 0;
+                totalHours += Math.max(0, clockOut - clockIn);
+            });
+
+            const hourlyRate = hourlyRates[role] || 0;
+            const weeklyPay = totalHours * hourlyRate;
+
+            document.getElementById('total-hours').textContent = totalHours.toFixed(2);
+            document.getElementById('weekly-pay').textContent = `$${weeklyPay.toFixed(2)}`;
+        }
+
+        function addDayRow() {
+            const table = document.getElementById('days-table');
+            const row = document.createElement('tr');
+            row.classList.add('day');
+            row.innerHTML = `
+                <td><input type="number" class="clock-in" placeholder="Clock In (e.g., 9)"></td>
+                <td><input type="number" class="clock-out" placeholder="Clock Out (e.g., 17)"></td>
+            `;
+            table.appendChild(row);
+        }
+    </script>
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>Saru Inc - Clocking In</h1>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="index.html">Main Page</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="support_service.html">Support Service</a>
+    </nav>
+
+    <main>
+        <h2>Clock In and Calculate Weekly Pay</h2>
+        <form onsubmit="event.preventDefault(); calculateWeeklyPay();">
+            <label for="role">Select Your Role:</label>
+            <select id="role">
+                <option value="general">General</option>
+                <option value="technician">Technician</option>
+                <option value="writer">Writer</option>
+                <option value="sales">Sales</option>
+            </select>
+
+            <table id="days-table">
+                <thead>
+                    <tr>
+                        <th>Clock In (Hours)</th>
+                        <th>Clock Out (Hours)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="day">
+                        <td><input type="number" class="clock-in" placeholder="Clock In (e.g., 9)"></td>
+                        <td><input type="number" class="clock-out" placeholder="Clock Out (e.g., 17)"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" onclick="addDayRow();">Add Another Day</button>
+            <button type="submit">Calculate Weekly Pay</button>
+        </form>
+
+        <h3>Results</h3>
+        <p>Total Hours Worked: <span id="total-hours">0</span></p>
+        <p>Weekly Pay: <span id="weekly-pay">$0.00</span></p>
+    </main>
+</body>
+</html>

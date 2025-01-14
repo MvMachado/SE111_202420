@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Saru Inc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background-color: #555;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        table {
+            width: 90%;
+            margin: 2rem auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: left;
+        }
+        th {
+            background-color: #444;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .event {
+            color: #2a7;
+            font-weight: bold;
+        }
+        .deadline {
+            color: #d22;
+            font-weight: bold;
+        }
+        .holiday {
+            color: #27a;
+            font-weight: bold;
+        }
+        .meeting {
+            color: #a52;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>Saru Inc - Calendar</h1>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="index.html">Main Page</a> <!-- Link to the main page -->
+        <a href="clock-in.html">Payroll</a> <!-- Link to the payroll page -->
+        <a href="support_service.html">Support Service</a> <!-- Link to the support service page -->
+    </nav>
+
+    <!-- Calendar Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Description</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Event Rows -->
+            <tr>
+                <td>January 15, 2025</td>
+                <td class="event">Team Building Workshop</td>
+                <td>An interactive workshop for all employees to strengthen teamwork.</td>
+                <td>All Roles</td>
+            </tr>
+            <tr>
+                <td>January 20, 2025</td>
+                <td class="deadline">Content Submission Deadline</td>
+                <td>Final deadline for writers to submit marketing materials.</td>
+                <td>Writers</td>
+            </tr>
+            <tr>
+                <td>January 22, 2025</td>
+                <td class="meeting">Sales Strategy Meeting</td>
+                <td>Discuss quarterly sales targets and strategies.</td>
+                <td>Sales</td>
+            </tr>
+            <tr>
+                <td>January 25, 2025</td>
+                <td class="holiday">Company Holiday</td>
+                <td>Office closed for a company-wide holiday.</td>
+                <td>All Roles</td>
+            </tr>
+            <tr>
+                <td>January 28, 2025</td>
+                <td class="meeting">Technology Update Briefing</td>
+                <td>Updates on the latest software developments and infrastructure plans.</td>
+                <td>Technology</td>
+            </tr>
+            <tr>
+                <td>February 5, 2025</td>
+                <td class="event">Monthly All-Hands Meeting</td>
+                <td>Company-wide update and Q&A session with leadership.</td>
+                <td>All Roles</td>
+            </tr>
+            <tr>
+                <td>February 10, 2025</td>
+                <td class="deadline">Client Proposal Submission</td>
+                <td>Sales team deadline for submitting client proposals.</td>
+                <td>Sales</td>
+            </tr>
+            <tr>
+                <td>February 14, 2025</td>
+                <td class="holiday">Valentine's Day Celebration</td>
+                <td>Office celebration with games and refreshments.</td>
+                <td>All Roles</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
